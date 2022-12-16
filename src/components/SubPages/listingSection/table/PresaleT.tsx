@@ -5,8 +5,7 @@ import { styled } from '@mui/material/styles';
 import { Container, Grid, Typography, Box , InputLabel, Button, MenuItem, Select, Stack, Rating, Divider} from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
-import { GlobalContext, Web3ModalContext } from '../../../../contexts';
-import { Audio } from 'react-loader-spinner'
+
 import useCitiToken from '../../../../store/web3/useCitiToken';
 import useSubmission from '../../../../store/web3/useSubmission';
 import Image from 'next/image';
@@ -374,11 +373,11 @@ interface Props {
 
                           {
                             (item.badge ==1) ? (
-                              <Image alt="GOLD" src={BADGE1} width={'30px'} height={'30px'}/>
+                              <Image alt="GOLD" src={BADGE1} width={30} height={30}/>
                             ) : (
                               item.badge==2 ? (
-                                <Image alt="SILVER" src={BADGE2} width={'30px'} height={'30px'}/>
-                            ) : ( (item.badge==3) ? ( <Image alt="BRONZE" src={BADGE3} width={'30px'} height={'30px'}/>) : (
+                                <Image alt="SILVER" src={BADGE2} width={30} height={30}/>
+                            ) : ( (item.badge==3) ? ( <Image alt="BRONZE" src={BADGE3} width={30} height={30}/>) : (
                               <></>)
                             ))
                           }

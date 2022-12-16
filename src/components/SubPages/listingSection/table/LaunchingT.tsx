@@ -5,8 +5,6 @@ import { styled } from '@mui/material/styles';
 import { Container, Grid, Typography, Box , InputLabel, Button, MenuItem, Select, Stack, Rating, Divider} from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
-import { GlobalContext, Web3ModalContext } from '../../../../contexts';
-import { Audio } from 'react-loader-spinner'
 import Image from 'next/image';
 import axios from 'axios';
 import { BASE_URL } from '../../../../config/constants'
@@ -313,7 +311,7 @@ interface Props {
                 
                       <Stack direction="row" spacing={2} sx={{width:'220px', minWidth:'220px'}}>
                         <Typography sx={{mr:1, fontWeight:'bold', mt:1}}>{index+1}.</Typography>
-                        <Image alt="cmc" src={CITI} width={'50px'} height={'50px'} style={{borderRadius:'25px'}}/>
+                        <Image alt="cmc" src={CITI} width={50} height={50} style={{borderRadius:25}}/>
                         <Box>
                           <Typography sx={{fontWeight:'bold'}}>{item.projectName}</Typography>
                           <Typography sx={{fontSize:'12px'}}>Coin {index+1} tickers</Typography>
@@ -331,9 +329,9 @@ interface Props {
 
                         <Box className={classes.customIconsView}>
                           <Stack direction="row" spacing={1} sx={{mt:1}}>
-                            <Box><Image alt="poocoin" src={POOCOIN} width={'20px'} height={'18px'}/></Box>
-                            <Box><Image alt="dexscreener" src={DEXSCREENER} width={'20px'} height={'18px'}/></Box>
-                            <Box><Image alt="dextools" src={DEXTOOLS} width={'20px'} height={'18px'}/></Box>
+                            <Box><Image alt="poocoin" src={POOCOIN} width={20} height={18}/></Box>
+                            <Box><Image alt="dexscreener" src={DEXSCREENER} width={20} height={18}/></Box>
+                            <Box><Image alt="dextools" src={DEXTOOLS} width={20} height={18}/></Box>
                           </Stack>
                         </Box>
 
@@ -343,18 +341,18 @@ interface Props {
 
                         <Box className={classes.customIconsView} sx={{mt:1}}>
                           <Stack direction="row" spacing={1}>
-                            <Box><Image alt="twitter" src={TWITTERP} width={'20px'} height={'18px'}/></Box>
-                            <Box><Image alt="telegram" src={TELEGRAMP} width={'20px'} height={'18px'}/></Box>
-                            <Box><Image alt="world" src={WORLDP} width={'20px'} height={'18px'}/></Box>
+                            <Box><Image alt="twitter" src={TWITTERP} width={20} height={18}/></Box>
+                            <Box><Image alt="telegram" src={TELEGRAMP} width={20} height={18}/></Box>
+                            <Box><Image alt="world" src={WORLDP} width={20} height={18}/></Box>
                           </Stack>
                         </Box>
 
                         <Box className={classes.customCardView} sx={{fontWeight:'bold', mt:1}}>
-                          <Box><Image alt="bsc" src={BSC} width={'20px'} height={'20px'}/></Box>
+                          <Box><Image alt="bsc" src={BSC} width={20} height={20}/></Box>
                         </Box>
 
                         <Grid sx={{mt:1}}>
-                          <Image alt="GOLD" src={index===0?BADGE1:(index===1?BADGE2:BADGE3)} width={'30px'} height={'30px'}/>
+                          <Image alt="GOLD" src={index===0?BADGE1:(index===1?BADGE2:BADGE3)} width={30} height={30}/>
                         </Grid> 
                       </Stack>
                   </Box>

@@ -5,8 +5,7 @@ import type { NextPage } from 'next';
 import { makeStyles } from "@mui/styles";
 import { styled } from '@mui/material/styles';
 import { Container, Grid, Stack, Typography} from '@mui/material';
-import { GlobalContext, Web3ModalContext } from '../../../contexts';
-import { API } from '../../../config';
+import { BASE_URL } from '../../../config/constants'
 
 const useStyles = makeStyles(() => ({
     fontTitle:{
@@ -35,7 +34,7 @@ interface Props {
     useEffect(() => {   
       const timeCalc = async () => {
         try {
-            const tempDate = await axios.post(`${API}api/users/get-date`);
+            const tempDate = await axios.post(`${BASE_URL}api/users/get-date`);
             setTimelimit(Number(finishTimes) - new Date(tempDate.data.date).getTime()/1000);
             setInterval(()=>{
                 setTimelimit(val => val - 1);

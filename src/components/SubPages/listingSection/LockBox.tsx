@@ -1,14 +1,11 @@
 import React, { useCallback } from "react";
-import { useContext, useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import { makeStyles } from "@mui/styles";
 import { styled } from '@mui/material/styles';
 import { Container, Grid, Stack, Typography, Button, Box, Paper, Table, TableBody, TableContainer, TableHead, TableRow, Divider, Select, MenuItem , ListItem, FormControl, InputLabel} from '@mui/material';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
-import { GlobalContext, Web3ModalContext } from '../../../contexts';
 import Image from 'next/image';
 import axios from 'axios';
-import { API } from '../../../config';
 
 const CITI = "/images/citizen/whiteciti.png";
 
@@ -144,141 +141,3 @@ const LockBox: NextPage = () => {
 };
 
 export default LockBox;
-
-
-// import React, { useCallback } from "react";
-// import { useContext, useEffect, useState } from 'react';
-// import type { NextPage } from 'next';
-// import { makeStyles } from "@mui/styles";
-// import { styled } from '@mui/material/styles';
-// import { Container, Grid, Stack, Typography, Button, Box, Paper, Table, TableBody, TableContainer, TableHead, TableRow, Divider, Select, MenuItem , ListItem, FormControl, InputLabel} from '@mui/material';
-// import TableCell, { tableCellClasses } from '@mui/material/TableCell';
-// import { GlobalContext, Web3ModalContext } from '../../../contexts';
-// import Image from 'next/image';
-// import axios from 'axios';
-// import { API } from '../../../config';
-
-// const CITI = "/images/citizen/whiteciti.png";
-// const CHAT = "/images/utils/chat.png";
-
-// const useStyles = makeStyles(() => ({
-//   centerRowStyle:{
-//     display:'flex',
-//     flexDirection:'row',
-//     justifyContent:'center',
-//   },
-//   detialRowStyle:{
-//     display:'flex',
-//     flexDirection:'row',
-//     justifyContent:'space-between',
-//   },
-//   customBoxStyle: {
-//     marginTop:'2%',
-//     padding:'20px',
-//     lineWidth:'1px',
-//     borderRadius: '10px',
-
-//     background:'#231643',
-//     boxShadow: '0px 0px 7px 8px rgba(0, 0, 0, 0.2)',
-//   },
-//   typeSelectBox: {
-//     width:'120px',
-//     borderRadius:'3px',
-//     background:'#231643',
-//     height:'30px',
-//     padding:'3px',
-//     display:'flex',
-//     flexDirection:'row',
-//     justifyContent:'center',
-//     fontSize:'14px',
-//     boxShadow: '0px 0px 4px 4px rgba(0, 0, 0, 0.2)',
-
-//   },
-//   lockedBoxStyle : {
-//     background: 'rgba(44, 47, 71, 0.55)',
-//     height:'auto',
-//     borderRadius:'10px',
-//     marginTop:'8%',
-//     width:'100%',
-//     padding:'10px',
-//     paddingTop:'25px',
-//     paddingdown:'25px',
-
-//   },
-//   mintButton : {
-//     background:'linear-gradient(to right, #996096,#9E2EF6)',
-//     width:'200px',
-//     fontSize:'13px',
-
-//   },
-//   selectOption: {
-//     "& .MuiSelect-select": {
-//       backgroundColor: 'transparent',
-//       fontFamily: 'Montserrat',
-//       fontWeight: 400,
-//       color: 'white',
-//       width:'60px',
-//       fontSize:'15x',
-//     },
-//     "& svg": {
-//       fill: 'white'
-//     }
-//   },
-
-//   customCardView: {
-//     display:'flex',
-//     flexDirection:'row',
-//     justifyContent:'space-between',
-//     paddingLeft:'10px',
-//     paddingRight:'10px',
-//   },
-
-//   cardHeader: {
-//     color: 'white',
-//     display:'flex',
-//     flexDirection:'row',
-//     alignItems:'center',
-//     justifyContent:'space-between',
-//     marginBottom:'10px',
-//   },
-
-// }));
-
-
-// const LockBox: NextPage = () => {
-//   const classes = useStyles(); 
-//     return (
-//         <Grid container className={classes.lockedBoxStyle}>
-//             <Grid xs={4} item className={classes.centerRowStyle}>
-//               <Stack direction="row">
-//                 <Box 
-//                 component="img"
-//                 src={'images/icons/Vector.png'}
-//                 sx={{
-//                     width: '15px',
-//                     mr:1,
-//                 }}
-//                 ></Box>
-//                 <Typography sx={{fontSize: {lg:'15px', xs:'13px'}, fontWeight:'bold', flexDirection:'row', alignItems:'center'}}>UNLOCK ALL FEATURES TODAY</Typography>
-//               </Stack>
-//             </Grid>
-
-//             <Grid xs={4} item>
-//               <Stack direction="row" spacing={1}>
-//                 <Typography sx={{fontSize: {lg:'15px', xs:'13px'}, flexDirection:'row', alignItems:'center'}}>Get 10,000 CITI</Typography>
-//                 <Typography sx={{fontSize: {lg:'15px', xs:'13px'}, flexDirection:'row', alignItems:'center'}}>Unlimited Access</Typography>
-//               </Stack>
-//               <Stack direction="row" spacing={1}>
-//                 <Typography sx={{fontSize: {lg:'15px', xs:'13px'}, flexDirection:'row', alignItems:'center'}}>Get 1 Citizen NFT</Typography>
-//                 <Typography sx={{fontSize: {lg:'15px', xs:'13px'}, flexDirection:'row', alignItems:'center'}}>VIP Access</Typography>
-//               </Stack>
-//             </Grid>
-//         </Grid>
-//     );
-// };
-
-// export default LockBox;
-
-
-
-

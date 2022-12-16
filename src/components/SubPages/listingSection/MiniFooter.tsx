@@ -5,7 +5,6 @@ import { makeStyles } from "@mui/styles";
 import Image from 'next/image';
 import { styled } from '@mui/material/styles';
 import { Container, Grid, Stack, Typography, Box} from '@mui/material';
-import { GlobalContext, Web3ModalContext } from '../../../contexts';
 
 const useStyles = makeStyles(() => ({
     fontTitle:{
