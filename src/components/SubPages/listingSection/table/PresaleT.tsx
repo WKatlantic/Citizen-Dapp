@@ -188,6 +188,7 @@ interface Props {
           const rowRes = await getProjectInfo(data[i]._id);
           if(rowRes.status == true && rowRes.data.permission == 1) {
             filteredRes.push(data[i])
+            console.log(filteredRes);
           }
         }
         setListingData(filteredRes)

@@ -24,6 +24,7 @@ import useSubmission from '../src/store/web3/useSubmission'
 import SubmitButton from '../src/components/SubmitButton'
 import LoadingRow from '../src/components/LoadingRow'
 import { useNotification } from '../src/store/redux/hooks/useNotification'
+import { useDextool } from '../src/store/redux/hooks';
 
 const DEX = ['PSC', 'Uniswap', 'Apeswap', 'Babyswap']
 const DEX_URL: { [key: string]: string } = {
@@ -348,8 +349,32 @@ function LaunchInfo(props: { project: any; update: Function }) {
   const [taxesSell, setTaxesSell] = useState<number>(props.project.taxesSell || 0)
   const [bullish, setBullish] = useState<string>(props.project.bullish || '')
   const { displayNotification } = useNotification()
+  const {fetchDexData} = useDextool();
+//   async function handleDex (_dex:any) {
+
+//     const dexDate = await fetchDexData(projectName);
+
+//     for(let i=0; i<dexDate.results.length; i++) {
+//         if(dexDate.results[i].id.exchange.includes( _dex)) {                
+//             if (_dex == "pancakev2") {
+//                 setDex({...dex , [_dex]: 'https://pancakeswap.finance/info/token/' + dexDate.results[i].id.token})
+//                 break;
+//             } else if (_dex.includes("uni")) {
+//                 setDex({...dex , [_dex]: 'https://info.uniswap.org/#/tokens/' + dexDate.results[i].id.token})
+//                 break;
+//             } else if (_dex.includes ("ape")) {
+//                 setDex({...dex , [_dex]: 'https://info.apeswap.finance/token/' + dexDate.results[i].id.token})
+//                 break;
+//             } else if(_dex.includes ("baby")) {
+//                 setDex({...dex , [_dex]: 'https://home.babyswap.finance/info/token' + dexDate.results[i].id.token})
+//                 break;
+//             }
+//         }
+//     }
+// }
 
   useEffect(() => {
+    
     setUtilities(props.project.utility || '')
     setUpcomingDate(new Date(props.project.launchDate).toISOString().slice(0, 10))
     setTaxesBuy(props.project.taxesBuy || 0)
@@ -418,6 +443,7 @@ function LaunchInfo(props: { project: any; update: Function }) {
         <Box>
           <Typography>2. DEX</Typography>
           <Stack spacing={1} mx={1} mt={1}>
+
             {DEX.map((dex: string, index) => (
               <Stack
                 direction="row"
