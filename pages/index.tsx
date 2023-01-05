@@ -37,7 +37,7 @@ export default function Home() {
               Access trusted
             </Typography>
             <Typography fontSize={22} mb={1} fontWeight="bold">
-              and reliable DeFi opportunities
+              and reliable DeFi opportunity
             </Typography>
             <Link
               href="https://t.me/CitizensOfficial"
